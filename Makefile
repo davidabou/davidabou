@@ -1,8 +1,8 @@
-SRC	=	unit_tests/tests.c
+SRC	=	main.c
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	my_defender
+NAME	=	exec
 
 all:	$(NAME)
 
