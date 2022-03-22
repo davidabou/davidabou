@@ -1,28 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Chocolatine
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ '**', '!ga-ignore-**' ]
   pull_request:
     branches: [ '**', '!ga-ignore-**' ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   check_repository_cleanliness:
-    # The type of runner that the job will run on
     name: Checks if the repository is clean and void of any unwanted files (temp files, binary files, etc.)
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      # Runs a single command using the runners shell
+
       - name: Checks if the repository is clean
         run: |
           ERROR=0;
@@ -42,7 +33,7 @@ jobs:
               ERROR=1;
             fi
           done
-          
+
           for i in $(find ! -path "./.git/**" -name \* ! -name ".git" -type d);
           do
             if [[ "$(basename -- "$i")" =~ .*tmp ]]; then
@@ -53,7 +44,7 @@ jobs:
               done
             fi
           done
-          
+
           if [[ ERROR -eq 1 ]]; then
             exit 1;
           fi
@@ -62,27 +53,43 @@ jobs:
     name: Checks if the program compiles correctly
     runs-on: ubuntu-latest
     needs: check_repository_cleanliness
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Compilation
         run: |
           timeout 120 make
-      
+
       - name: Clean temporary files
         run: |
           make clean
-  
+
+      - name: Checks executables
+        run: |
+          for i in $(echo $EXECUTABLES | tr "," " ");
+          do
+            if test -f "$i"; then
+              if [[ "$(stat -c %a "$i")" =~ ^(5|7).* ]]; then
+                echo "$i have permissions";
+              else
+                exit 1;
+              fi
+            else
+              exit 1;
+            fi
+          done
+        env:
+          EXECUTABLES: ${{ secrets.EXECUTABLES }}
+
   run_tests:
     name: Runs tests
     runs-on: ubuntu-latest
     needs: check_program_compilation
-    
+
     steps:
       - uses: actions/checkout@v3
 
       - name: Compilation with tests_run rule
         run: |
           timeout 120 make tests_run
-    
