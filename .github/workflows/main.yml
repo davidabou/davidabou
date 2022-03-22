@@ -57,4 +57,32 @@ jobs:
           if [[ ERROR -eq 1 ]]; then
             exit 1;
           fi
+
+  check_program_compilation:
+    name: Checks if the program compiles correctly
+    runs-on: ubuntu-latest
+    needs: check_repository_cleanliness
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Compilation
+        run: |
+          timeout 120 make
+      
+      - name: Clean temporary files
+        run: |
+          make clean
   
+  run_tests:
+    name: Runs tests
+    runs-on: ubuntu-latest
+    needs: check_program_compilation
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Compilation with tests_run rule
+        run: |
+          timeout 120 make tests_run
+    
