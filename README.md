@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DavidAbou
 - 👀 I’m interested in sleeping
-- 🌱 I’m currently learning React Native
+- 🌱 I’m currently learning the past
 - 💞️ I’m looking to collaborate on nothing
 - 📫 How to reach me ? That's a good question...
 
