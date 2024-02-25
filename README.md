@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @DavidAbou
+- 👋 Hi, I’m @nethriis
 - 👀 I’m interested in sleeping
 - 🌱 I’m currently learning the past
 - 💞️ I’m looking to collaborate on nothing
