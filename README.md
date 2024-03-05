@@ -1,4 +1,4 @@
-# Hello, I'm Nethriis! 👋
+# Hello, I'm David! 👋
 
 I'm a computer science student deeply fascinated by all things technology. Here, you'll find a variety of projects that I've worked on, showcasing my skills and interests in the ever-evolving tech landscape.
 
