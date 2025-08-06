@@ -6,6 +6,8 @@
   *Contributing to the beauty of the world ✨*
 </div>
 
+### About Me
+
 - 🎓 Final-year software engineering student at [**@Epitech**](https://github.com/Epitech) (2021–2026)
 - 💡 Passionate about clean code, developer experience (DX), and building robust, scalable products
 - 🛠️ Currently working on developer-focused tools to improve workflows and code quality
