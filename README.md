@@ -1,17 +1,18 @@
-## ✨ About Me
+<div align="center">
+  <img src="" alt="David Abou" width="100%" height="200">
 
-- 🎓 Currently pursuing a degree in Computer Science.
-- 💡 Interested in exploring new technologies, innovative software solutions, and challenging programming paradigms.
-- 🌱 Continuously learning and keeping up-to-date with the latest trends in the tech industry.
+  ## Full-Stack Developer
 
-## 📊 GitHub Stats
+  *Contributing to the beauty of the world ✨*
+</div>
 
-![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=nethriis&show_icons=true&theme=github_dark_dimmed)
+- 🎓 Final-year software engineering student at [**@Epitech**](https://github.com/Epitech) (2021–2026)
+- 💡 Passionate about clean code, developer experience (DX), and building robust, scalable products
+- 🛠️ Currently working on developer-focused tools to improve workflows and code quality
+- 🌱 Always learning, experimenting, and exploring better ways to build software
 
-![GitHub Streak](https://streak-stats.demolab.com?user=nethriis&theme=github-dark-dimmed)
+### GitHub Stats
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nethriis&layout=compact&theme=github_dark_dimmed)
+![stats](https://github-readme-stats.vercel.app/api?username=davidabou&show_icons=true&theme=midnight-purple&hide_border=true&hide_title=true&count_private=true&bg_color=000000)
 
-## 🏆 GitHub Trophies
-
-![trophy](https://github-profile-trophy.vercel.app/?username=nethriis&theme=gitdimmed)
+Thanks for stopping by!
