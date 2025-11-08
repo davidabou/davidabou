@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://pbs.twimg.com/profile_banners/1895079252254474240/1754553050/1500x500" alt="David Abou" width="100%" height="200">
 
-  ## Full-Stack Developer & Tech Enthusiast
+  ## Software Engineer & Tech Enthusiast
 
   *Contributing to the beauty of the world ✨*
 </div>
